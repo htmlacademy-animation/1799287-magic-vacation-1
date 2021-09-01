@@ -34,7 +34,6 @@
   margin-right: 3rem;
   padding: 0 5.6rem;
   height: 6rem;
-  width: calc(100% - 21rem);
   text-transform: uppercase;
   font: inherit;
   font-size: 2.4rem;
@@ -43,6 +42,34 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  width: 84%;
+  animation:  ease-in 0.5s fadeIn;
+
+
+   &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: $c-light;
+      right: 0;
+  }
+
+&::before {
+  left: 50%;
+}
+
+::after {
+  right: 50%;
+}
+
+input:focus ~ .form__field::before,
+input:focus ~ .form__field::after {
+  width: 50%;
+}
+
+
 
   &:focus {
     border: 1px solid $c-purple;
