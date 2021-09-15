@@ -50,6 +50,7 @@
     .slider__item-text {
       margin-top: 7.8rem;
 
+
       @media (min-width: $stop-scaling) {
         margin-top: 78px;
       }
@@ -74,6 +75,7 @@
   line-height: 0.906;
   letter-spacing: -0.04em;
 
+
   @media (min-width: $stop-scaling) {
     margin-left: -55px;
     font-size: 48px;
@@ -96,6 +98,25 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  opacity: 0;
+  transform: translateX(35px);
+
+
+
+
+  .swiper-slide-active  &{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease-in;
+  }
+
+  .swiper-slide-next &{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.3s all 0.5s ease-in;
+  }
+
+
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;

@@ -34,7 +34,6 @@
   margin-right: 3rem;
   padding: 0 5.6rem;
   height: 6rem;
-  width: calc(100% - 21rem);
   text-transform: uppercase;
   font: inherit;
   font-size: 2.4rem;
@@ -43,6 +42,46 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  width: 84%;
+  animation:  slide 0.5s ease-in;
+  margin-left: auto;
+
+  @keyframes slide{
+    0% {
+      width: 1%;
+    }
+    100% {
+      width: 84%;
+    }
+  }
+
+
+   &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: $c-light;
+      right: 0;
+  }
+
+&::before {
+  left: 50%;
+}
+
+::after {
+  right: 50%;
+}
+
+
+
+input:focus ~ .form__field::before,
+input:focus ~ .form__field::after {
+  width: 50%;
+}
+
+
 
   &:focus {
     border: 1px solid $c-purple;
@@ -52,7 +91,7 @@
     margin-right: 30px;
     padding: 0 56px;
     height: 60px;
-    width: calc(100% - 210px);
+    width: 84%;
     font-size: 24px;
     border-radius: 30px;
   }
@@ -79,7 +118,7 @@
 }
 
 .form__button {
-  flex-grow: 1;
+  width: 13%;
 
   @media (orientation: portrait) {
     position: relative;
