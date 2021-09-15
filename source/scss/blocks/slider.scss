@@ -49,7 +49,6 @@
   &:nth-child(2) {
     .slider__item-text {
       margin-top: 7.8rem;
-      transition-delay: 0.3s;
 
 
       @media (min-width: $stop-scaling) {
@@ -104,6 +103,7 @@
 
 
 
+
   .swiper-slide-active  &{
     opacity: 1;
     transform: translateX(0);
@@ -113,8 +113,7 @@
   .swiper-slide-next &{
     opacity: 1;
     transform: translateX(0);
-
-    transition: all 0.5s ease-in;
+    transition: 0.3s all 0.5s ease-in;
   }
 
 

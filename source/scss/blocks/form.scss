@@ -43,7 +43,17 @@
   border-radius: 3rem;
   outline: none;
   width: 84%;
-  animation:  ease-in 0.5s fadeIn;
+  animation:  slide 0.5s ease-in;
+  margin-left: auto;
+
+  @keyframes slide{
+    0% {
+      width: 1%;
+    }
+    100% {
+      width: 84%;
+    }
+  }
 
 
    &::after {
@@ -64,6 +74,8 @@
   right: 50%;
 }
 
+
+
 input:focus ~ .form__field::before,
 input:focus ~ .form__field::after {
   width: 50%;
@@ -79,7 +91,7 @@ input:focus ~ .form__field::after {
     margin-right: 30px;
     padding: 0 56px;
     height: 60px;
-    width: calc(100% - 210px);
+    width: 84%;
     font-size: 24px;
     border-radius: 30px;
   }
@@ -106,7 +118,7 @@ input:focus ~ .form__field::after {
 }
 
 .form__button {
-  flex-grow: 1;
+  width: 13%;
 
   @media (orientation: portrait) {
     position: relative;
