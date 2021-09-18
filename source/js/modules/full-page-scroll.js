@@ -13,7 +13,7 @@ export default class FullPageScroll {
   }
 
   init() {
-    document.addEventListener(`wheel`, throttle(this.onScrollHandler, this.THROTTLE_TIMEOUT, {trailing: true}));
+    document.addEventListener(`wheel`, throttle(this.onScrollHandler, this.THROTTLE_TIMEOUT, { trailing: true }));
     window.addEventListener(`popstate`, this.onUrlHashChengedHandler);
 
     this.onUrlHashChanged();
@@ -40,11 +40,37 @@ export default class FullPageScroll {
   }
 
   changeVisibilityDisplay() {
+    
+    let bg = document.querySelector('.bg-screen')
+    let prize = document.querySelector('.prizes')
+
     this.screenElements.forEach((screen) => {
-      screen.classList.add(`screen--hidden`);
-      screen.classList.remove(`active`);
+      if (screen.classList.contains('screen--story') && this.screenElements[this.activeScreen].classList.contains(`screen--prizes`)) {
+        screen.classList.remove(`active`);
+        setTimeout(() => {
+          screen.classList.add(`screen--hidden`);
+        }, 700)
+      } else {
+        screen.classList.add(`screen--hidden`);
+        screen.classList.remove(`active`);
+      }
+
     });
-    this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
+
+    if (this.screenElements[this.activeScreen].classList.contains(`screen--prizes`)) {
+      setTimeout(() => {
+        this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
+      }, 700)
+      setTimeout(() => {
+        prize.style.opacity = '1';
+      }, 800)
+      bg.style.height = '100%'
+    } else {
+      prize.style.opacity = '0';
+      bg.style.height = '0%'
+      this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
+    }
+
     this.screenElements[this.activeScreen].classList.add(`active`);
   }
 
