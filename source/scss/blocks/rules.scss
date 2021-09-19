@@ -93,7 +93,7 @@
   column-count: 2;
   column-gap: 9.6rem;
   margin: auto;
-  padding-top: 7rem;
+  padding-top: 6.5rem;
   max-width: 69.6rem;
 
   @media (min-width: $stop-scaling) {
@@ -123,6 +123,7 @@
   padding-top: 0.6rem;
   padding-left: 6.5rem;
   break-inside: avoid;
+  top: 3px;
 
   &:nth-child(1) p{ animation-delay: 0.3s; }
   &:nth-child(2) p{ animation-delay: 0.7s; }
@@ -144,6 +145,7 @@
   @media (max-width: $tablet) and (orientation: portrait) {
     margin-bottom: 1rem;
     padding-left: 5rem;
+    top: 0;
   }
 
   @media (max-width: $tablet) and (orientation: landscape) {
