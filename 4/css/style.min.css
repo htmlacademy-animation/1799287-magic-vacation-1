@@ -3117,13 +3117,13 @@ body.page-loaded .page-header__social {
   animation-delay: 0.3s;
 }
 .rules__item:nth-child(2) p {
-  animation-delay: 0.6s;
+  animation-delay: 0.7s;
 }
 .rules__item:nth-child(3) p {
-  animation-delay: 1s;
+  animation-delay: 1.2s;
 }
 .rules__item:nth-child(4) p {
-  animation-delay: 1.3s;
+  animation-delay: 1.6s;
 }
 .rules__item:nth-child(1)::before {
   animation-delay: 0s;
@@ -3135,7 +3135,7 @@ body.page-loaded .page-header__social {
   animation-delay: 0.9s;
 }
 .rules__item:nth-child(4)::before {
-  animation-delay: 1.4s;
+  animation-delay: 1.3s;
 }
 @media (min-width: 2000px) {
   .rules__item {
@@ -3247,7 +3247,7 @@ body.page-loaded .page-header__social {
 }
 .rules__link.btn::before {
   opacity: 0;
-  animation: buttoLink 0.8s ease-in 1.3s forwards;
+  animation: buttoLink 0.8s ease-in 1.55s forwards;
 }
 @keyframes buttoLink {
   0% {
