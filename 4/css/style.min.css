@@ -3078,7 +3078,7 @@ body.page-loaded .page-header__social {
   column-count: 2;
   column-gap: 9.6rem;
   margin: auto;
-  padding-top: 7rem;
+  padding-top: 6.5rem;
   max-width: 69.6rem;
 }
 @media (min-width: 2000px) {
@@ -3112,6 +3112,7 @@ body.page-loaded .page-header__social {
   padding-top: 0.6rem;
   padding-left: 6.5rem;
   break-inside: avoid;
+  top: 3px;
 }
 .rules__item:nth-child(1) p {
   animation-delay: 0.3s;
@@ -3148,6 +3149,7 @@ body.page-loaded .page-header__social {
   .rules__item {
     margin-bottom: 1rem;
     padding-left: 5rem;
+    top: 0;
   }
 }
 @media (max-width: 1024px) and (orientation: landscape) {
