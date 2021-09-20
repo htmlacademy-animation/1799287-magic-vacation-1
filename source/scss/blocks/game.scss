@@ -50,6 +50,26 @@
   line-height: 0.906;
   letter-spacing: -0.04em;
 
+  .text__word {
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+
+    span{
+      transform: translate3d(0, 1.5em, 0);
+      display: inline-block;
+     }
+  }
+
+  &.active{
+    .text__word {
+      span{
+        transform: translate3d(0, 0, 0);
+       }
+    }
+
+  }
+
   @media (min-width: $stop-scaling) {
     font-size: 48px;
   }

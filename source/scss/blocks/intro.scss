@@ -3,15 +3,15 @@
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
-  padding: 15.5rem 0 10rem;
+  padding: 11.5rem 0 10rem;
   width: 100%;
 
   @media (min-width: $stop-scaling) {
-    padding: 155px 0 100px;
+    padding: 115px 0 100px;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
-    padding: 6rem 0 5.6rem;
+    padding: 5rem 0 5.6rem;
   }
 
   @media (max-width: $tablet) and (orientation: landscape) {
@@ -25,7 +25,7 @@
 
 .intro__title {
   margin: 0;
-  max-width: 99rem;
+  max-width: 100rem;
   text-transform: uppercase;
   font-family: $font-alt;
   font-weight: 400;
@@ -33,8 +33,36 @@
   line-height: 0.906;
   letter-spacing: -0.04em;
 
+  .text__word {
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    line-height: 1.6;
+
+    span{
+      transform: translate3d(0, 1.5em, 0);
+      display: inline-block;
+     }
+  }
+
+  .text__word:nth-of-type(2){
+    transform: translateY(-57%)
+  }
+
+  &.active{
+
+    .text__word {
+      span{
+        transform: translate3d(0, 0, 0);
+       }
+    }
+
+  }
+    
+   
+
   @media (min-width: $stop-scaling) {
-    max-width: 990px;
+    max-width: 998px;
     font-size: 120px;
   }
 
