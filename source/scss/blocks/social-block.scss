@@ -36,6 +36,9 @@
     border: 2px solid $c-light;
     z-index: -1;
     display: block;
+    transition-property: transform;
+    transition-timing-function: ease-in;
+    transition-duration: 0.3s;
     animation: ease-in-out 0.5s zoom 1s;
   }
 
@@ -64,8 +67,7 @@
     color: $c-purple;
 
     &::before {
-      width: 112.5%;
-      height: 112.5%;
+      transform: scale(1.2);
     }
   }
 
@@ -92,6 +94,98 @@
       height: 100%;
       background-color: $c-purple;
       border-color: $c-purple;
+    }
+  }
+}
+
+body{
+  &.dark-blue{
+    .social-block__toggler {
+      color: $c-blue;
+      &:hover,
+  .social-block--active & {
+    color: $c-blue;
+  }
+
+  &:focus {
+   color: $c-blue;
+
+    &::before {
+      border-color: $c-blue;
+      background-color: none;
+    }
+  }
+
+  &:active,
+  &:active:focus {
+    color: white;
+    background-color: $c-blue;
+
+    &::before {
+      background-color: $c-blue;
+      border-color: $c-blue;
+    }
+  }
+    }
+  }
+
+  &.blue{
+    .social-block__toggler {
+      color: $c-dark-blue;
+      &:hover,
+  .social-block--active & {
+    color: $c-dark-blue;
+  }
+
+  &:focus {
+   color: $c-dark-blue;
+
+    &::before {
+      border-color: $c-dark-blue;
+      background-color: none;
+    }
+  }
+
+  &:active,
+  &:active:focus {
+    color: white;
+    background-color: $c-dark-blue;
+
+    &::before {
+      background-color: $c-dark-blue;
+      border-color: $c-dark-blue;
+    }
+  }
+    }
+  }
+
+  &.violet{
+    .social-block__toggler {
+      color: $c-dark;
+      &:hover,
+  .social-block--active & {
+    color: $c-dark;
+  }
+
+  &:focus {
+   color: $c-dark;
+
+    &::before {
+      border-color: $c-dark;
+      background-color: none;
+    }
+  }
+
+  &:active,
+  &:active:focus {
+    color: white;
+    background-color: $c-dark;
+
+    &::before {
+      background-color: $c-dark;
+      border-color: $c-dark;
+    }
+  }
     }
   }
 }

@@ -45,30 +45,51 @@ export default class FullPageScroll {
     let prize = document.querySelector('.prizes')
 
     this.screenElements.forEach((screen) => {
+      
       if (screen.classList.contains('screen--story') && this.screenElements[this.activeScreen].classList.contains(`screen--prizes`)) {
         screen.classList.remove(`active`);
         setTimeout(() => {
           screen.classList.add(`screen--hidden`);
         }, 700)
       } else {
+
+        if (screen.classList.contains('screen--prizes') && this.screenElements[this.activeScreen].classList.contains(`screen--rules`)) {
+          screen.classList.remove(`active`);
+          setTimeout(() => {
+            screen.classList.add(`screen--hidden`);
+          }, 400)
+        } else{
         screen.classList.add(`screen--hidden`);
         screen.classList.remove(`active`);
+        }
       }
 
     });
 
-    if (this.screenElements[this.activeScreen].classList.contains(`screen--prizes`)) {
+    if ( this.screenElements[this.activeScreen].classList.contains(`screen--prizes`)) {
       setTimeout(() => {
         this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
-      }, 700)
+      })
       setTimeout(() => {
         prize.style.opacity = '1';
       }, 800)
       bg.style.height = '100%'
-    } else {
+      setTimeout(() => {
+        bg.style.height = '0%'
+      }, 700)
+    } 
+    else if ( this.screenElements[this.activeScreen].classList.contains(`screen--rules`)) {
       prize.style.opacity = '0';
       bg.style.height = '0%'
+      setTimeout(() => {
+        this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
+      },100) 
+      }
+      
+    else {
       this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
+      prize.style.opacity = '0';
+      bg.style.height = '0%'
     }
 
     this.screenElements[this.activeScreen].classList.add(`active`);

@@ -334,6 +334,52 @@ body{
   }
 }
 
+body{
+  &.dark-blue{
+    .page-header__menu {
+      a {
+        &:hover,
+        &:focus {
+          color: $c-blue;  
+
+          &::after {
+            background-color: $c-blue;  
+          }
+      }
+    }
+  }
+}
+
+&.blue{
+  .page-header__menu {
+    a {
+      &:hover,
+      &:focus {
+        color: $c-dark-blue;  
+
+        &::after {
+          background-color: $c-dark-blue;  
+        }
+    }
+  }
+}
+}
+&.violet{
+  .page-header__menu {
+    a {
+      &:hover,
+      &:focus {
+        color: $c-dark;  
+
+        &::after {
+          background-color: $c-dark;  
+        }
+    }
+  }
+}
+}
+}
+
 .page-header__social {
   margin-left: 4.8rem;
   transition:  opacity 0.5s  cubic-bezier(.65,.45,.78,.96) 1s;

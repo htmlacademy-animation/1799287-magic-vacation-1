@@ -17,6 +17,14 @@ export default () => {
         },
         on: {
           slideChange: () => {
+            if (storySlider.activeIndex === 0) {
+              document.body.classList.add('violet')
+            }
+            else if (storySlider.activeIndex === 2) {
+              document.body.classList.add('dark-blue')
+            } else if (storySlider.activeIndex === 3){
+              document.body.classList.add('blue')
+            }
             if (storySlider.activeIndex === 0 || storySlider.activeIndex === 1) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
             } else if (storySlider.activeIndex === 2 || storySlider.activeIndex === 3) {
@@ -51,6 +59,15 @@ export default () => {
         },
         on: {
           slideChange: () => {
+            document.body.classList.remove('blue', 'dark-blue', 'violet')
+            if (storySlider.activeIndex === 0){
+              document.body.classList.add('violet')
+            }else if (storySlider.activeIndex === 2) {
+              document.body.classList.add('dark-blue')
+            } else if (storySlider.activeIndex === 4){
+              document.body.classList.add('blue')
+            }
+
             if (storySlider.activeIndex === 0) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg")`;
             } else if (storySlider.activeIndex === 2) {
