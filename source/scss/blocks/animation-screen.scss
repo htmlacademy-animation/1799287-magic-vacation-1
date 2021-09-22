@@ -9,6 +9,7 @@
   background-size: 100% auto;
   background-position: center;
   z-index: 1;
+  opacity: 0;
 
   @include retina {
     background-image: url("../img/scene@2x.png");

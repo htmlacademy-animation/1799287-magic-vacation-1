@@ -1,16 +1,17 @@
 .disclaimer {
-  color: $c-dark;
+  color: rgba(95, 69, 140, 1);
   background-color: $c-light;
+  transition: color 0.4s ease-in;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     font-weight: 400;
-    color: $c-light;
+    color: $c-light !important;
     background-color: transparent;
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
     font-weight: 400;
-    color: $c-light;
+    color: $c-light !important;
     background-color: transparent;
   }
 

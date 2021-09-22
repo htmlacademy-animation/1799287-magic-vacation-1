@@ -38,6 +38,7 @@
   z-index: 1;
 }
 
+
 .screen__footer {
   position: absolute;
   bottom: 0;
@@ -46,14 +47,35 @@
   color: $c-dark;
   background-color: $c-light;
   z-index: 1;
+
+  &.screen__footer_prize{
+    color: rgba(95, 69, 140, 0);
+    transition: all 0.5s ease-in;
+  }
+
+  &.screen__footer_up{
+    color: rgba(95, 69, 140, 1);
   transform: translateY(36px);
-  transition:  all 0.5s  cubic-bezier(.65,.45,.78,.96) 1s;
+  animation: footerUp 0.5s  cubic-bezier(.65,.45,.78,.96) 1s forwards;
+
+
+  @keyframes footerUp {
+    to{
+      transform: translateY(0px)
+    }
+  }
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 0 3.6rem 0 0;
     transition-delay: 0s;
+    color: rgba(95, 69, 140, 0);
+    transition-property: width, height;
+    transition-duration: 0.5s, 0.5s;
+    transition-delay: 0s, 0s;
+    transition-timing-function: ease-in,ease-in;
 
     &.screen__footer--full {
       width: 100%;
@@ -66,6 +88,9 @@
     height: 3.5rem;
     border-radius: 0 3.6rem 0 0;
     transition-delay: 0s;
+    &.screen__footer_up{
+      color: rgba(95, 69, 140, 0);
+    }
 
     &.screen__footer--full {
       width: 100%;
@@ -74,19 +99,13 @@
   }
 }
 
-body{
-  &.page-loaded{
-    .screen__footer {
-      transform: translateY(0); 
-     }
-  }
-}
 
 .screen__footer-wrapper {
   @include container;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     opacity: 0;
+    transition: opacity 0.6s ease-in;
 
     .screen__footer--full & {
       opacity: 1;

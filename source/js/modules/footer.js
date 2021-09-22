@@ -9,7 +9,7 @@ export default () => {
           footer.classList.remove(`screen__footer--full`);
         } else {
           footer.classList.add(`screen__footer--full`);
-        }
+     } 
       });
     }
   }
