@@ -1,26 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350 330">
+<svg opacity="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350 330">
+    <animate  attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" begin="6s" calcMode="linear" fill="freeze" />
+
   <defs>
-    <clipPath id="window">
+    <clipPath id="window" opacity="0">
       <path d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z"/>
     </clipPath>
   </defs>
-  <g>
+  <g opacity="0">
+  <animate  id="LinesDisplay" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="2s" begin="11s" calcMode="linear" fill="freeze"/>
+      <animateMotion
+  begin="LinesDisplay.begin-1s"
+      dur="2s"
+      additive="sum"
+from="-100,0" to="0,0"
+calcMode="linear"
+fill="freeze"
+/> 
     <path d="M91.14,327.79a2.2,2.2,0,0,1-2-2.36l13.66-193.17c1.1-15.49-4.8-21.92-8.75-24.47a1.35,1.35,0,0,1,.53-2.45C103,104,122.18,104,120,134.19L106.43,326.67a2.2,2.2,0,0,1-2.35,2Z" fill="#fff"/>
     <path d="M124.5,328.17a2.2,2.2,0,0,1-2.17-2.23l2.24-193.63c0.19-15.53-6.07-21.61-10.16-23.91a1.35,1.35,0,0,1,.39-2.47c8.36-1.9,27.49-3,27.15,27.28l-2.25,192.93a2.2,2.2,0,0,1-2.22,2.18Z" fill="#fff"/>
   </g>
-  <g>
-    <path d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z" fill="none" stroke="#fff" stroke-width="2"/>
+  <g opacity="0" style="transform-origin: center center;
+  transform-box: fill-box;" >
+    <path style="transform-origin: center center;
+  transform-box: fill-box;" d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z" fill="none" stroke="#fff" stroke-width="2"/>
+    <animate  id="windowSmallDisplay" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="3s" begin="7s" calcMode="linear" fill="freeze"/>
+    <animateTransform attributeName="transform"
+    id="windowSmall"
+                        type="scale"
+                        values="0.5 0.5; 1 1;"
+                        begin="6.5s"
+                        dur="5s"
+                        additive="sum"
+                        />
+
+      <animateMotion
+  begin="6.5s"
+      dur="5s"
+      additive="sum"
+from="-20,50" to="0,0"
+/>   
   </g>
-  <g clip-path="url(#window)">
-    <g transform="translate(220 160)">
+  <g clip-path="url(#window)" opacity="0" >
+      <animate  id="windowSmallDisplaySecond" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="3s" begin="7s" calcMode="linear" fill="freeze"/>
+    <g transform="translate(220 160)" >
       <line x1="28.18" y1="38.34" x2="91.09" y2="38.34" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
       <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
       <line x1="218.19" y1="23.72" x2="257.97" y2="23.72" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
       <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
       <line x1="246.24" y1="13.45" x2="268.43" y2="13.45" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+
+<animateMotion
+  begin="windowSmallDisplaySecond.end-4s"
+      dur="17s"
+      additive="sum"
+from="200,0" to="-400,0"
+fill="freeze"
+/> 
     </g>
   </g>
-  <g>
+  <g opacity="0">
+      <animate  id="ChairDisplay" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="3s" begin="11s" calcMode="linear" fill="freeze"/>
+      <animateMotion
+  begin="ChairDisplay.begin-1s"
+      dur="2s"
+      additive="sum"
+from="-100,0" to="0,0"
+calcMode="linear"
+fill="freeze"
+/> 
     <path d="M257.5,259.82H196.76V245.63h55.09a9.92,9.92,0,0,1,9.9,9.93,4.26,4.26,0,0,1-4.25,4.25" fill="#a67ee5"/>
     <path d="M257.5,259.82H196.76V245.63h55.09a9.92,9.92,0,0,1,9.9,9.93A4.26,4.26,0,0,1,257.5,259.82Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
     <polygon points="185.47 328.31 171.5 328.31 165.19 286.72 179.16 286.72 185.47 328.31" fill="#a67ee5"/>
@@ -35,7 +82,25 @@
     <path d="M206.26,259.82h-72l-2.13-14.19H200.6a9.92,9.92,0,0,1,9.9,9.93A4.26,4.26,0,0,1,206.26,259.82Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="151.57" y1="195.44" x2="209.05" y2="195.44" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-  <g>
+  <g opacity="0" style="transform-origin: center center;
+  transform-box: fill-box;">
+  <animate  id="ListDisplay" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="2s" begin="11.5s" calcMode="linear" fill="freeze"/>
+      <animateMotion
+  begin="ListDisplay.begin-1s"
+      dur="2s"
+      additive="sum"
+from="-100,0" to="0,0"
+calcMode="linear"
+fill="freeze"
+/> 
+
+<animateTransform attributeName="transform"
+                        type="rotate"
+                        values="0 0 0; -8 0 0; 5 0 0; 0 0 0;"
+                        begin="ListDisplay.begin+1s"
+                        dur="4s"
+                        additive="sum"
+                        />
     <path d="M79.18,194A131,131,0,0,1,94.77,220.9a255,255,0,0,1-20.08-23.55,259,259,0,0,1-17.07-25.88A131.72,131.72,0,0,1,79.18,194" fill="#36e69a"/>
     <path d="M80.94,214.39a127.19,127.19,0,0,1,22.8,20.49A242.09,242.09,0,0,1,77.9,219.17a235.86,235.86,0,0,1-23.42-18.7,119.82,119.82,0,0,1,26.46,13.92" fill="#36e69a"/>
     <path d="M93.66,205.48a258.38,258.38,0,0,0,10.08,29.39,125.63,125.63,0,0,0-4.5-30.52,135.9,135.9,0,0,0-12.06-29.44,260.33,260.33,0,0,0,6.47,30.57" fill="#36e69a"/>
@@ -49,7 +114,7 @@
     <path d="M141,264.26a236.09,236.09,0,0,0-5.58,29.9,117.46,117.46,0,0,0,11.15-27.73,127.2,127.2,0,0,0,4-31A214.24,214.24,0,0,0,141,264.26" fill="#068e4d"/>
     <path d="M92.62,217.67A529.26,529.26,0,0,1,149.48,328" fill="none" stroke="#36e69a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
   </g>
-  <g>
+  <g opacity="0">
     <line x1="72.03" y1="329" x2="295.52" y2="329" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
 </svg>
